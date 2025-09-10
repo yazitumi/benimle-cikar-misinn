@@ -68,9 +68,9 @@
 </style>
 </head>
 <body>
-<h1>Benimle Çıkar Mısın?</h1>
-<button id="yes">Evet</button>
-<button id="no">Hayır</button>
+<h1>Benimle Çıkar Mısın Rümeysa?</h1>
+<button id="yes">Seni çok seviyorum Recep</button>
+<button id="no">Ne münasebet</button>
 
 <script>
 const noBtn = document.getElementById('no');
@@ -78,7 +78,7 @@ const yesBtn = document.getElementById('yes');
 
 // Başlangıçta "Hayır" butonunu rastgele bir yere koy
 function placeNoBtn() {
-  noBtn.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+  noBtn.style.left = Math.random() * (window.innerWidth - 150) + 'px';
   noBtn.style.top = Math.random() * (window.innerHeight - 50) + 'px';
 }
 placeNoBtn();
@@ -86,7 +86,7 @@ placeNoBtn();
 // Fare "Hayır" butonunun üstüne gelince kaç
 noBtn.addEventListener('mouseover', placeNoBtn);
 
-// "Evet"e tıklayınca kalpler uçsun
+// "Evet"e tıklayınca kalpler uçsun ve mesaj gösterilsin
 yesBtn.addEventListener('click', () => {
   for (let i = 0; i < 20; i++) {
     const heart = document.createElement('div');
@@ -97,8 +97,9 @@ yesBtn.addEventListener('click', () => {
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 1500);
   }
-  alert("Seni çok seviyorum ❤️");
+  alert("Seni çok seviyorum Recep ❤️");
 });
 </script>
 </body>
 </html>
+
